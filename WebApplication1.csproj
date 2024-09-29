@@ -1,7 +1,81 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>9e5bb10c-c76e-48ed-8cdb-554a9163253e</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\netcoreapp3.1\appsettings.Development.json" />
+    <Content Include="bin\Debug\netcoreapp3.1\appsettings.json" />
+    <Content Include="bin\Debug\netcoreapp3.1\publish\appsettings.Development.json" />
+    <Content Include="bin\Debug\netcoreapp3.1\publish\appsettings.json" />
+    <Content Include="bin\Debug\netcoreapp3.1\publish\WebApplication1.deps.json" />
+    <Content Include="bin\Debug\netcoreapp3.1\publish\WebApplication1.runtimeconfig.json" />
+    <Content Include="bin\Debug\netcoreapp3.1\publish\wwwroot\css\site.css" />
+    <Content Include="bin\Debug\netcoreapp3.1\publish\wwwroot\favicon.ico" />
+    <Content Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\jquery\LICENSE.txt" />
+    <Content Include="bin\Debug\netcoreapp3.1\WebApplication1.deps.json" />
+    <Content Include="bin\Debug\netcoreapp3.1\WebApplication1.runtimeconfig.dev.json" />
+    <Content Include="bin\Debug\netcoreapp3.1\WebApplication1.runtimeconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\netcoreapp3.1\publish\web.config" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\WebApplication1.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\WebApplication1.exe" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\WebApplication1.pdb" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\WebApplication1.Views.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\WebApplication1.Views.pdb" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\js\site.js" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\bootstrap\LICENSE" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\jquery\dist\jquery.js" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Include="bin\Debug\netcoreapp3.1\publish\wwwroot\lib\jquery\dist\jquery.min.map" />
+    <None Include="bin\Debug\netcoreapp3.1\WebApplication1.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\WebApplication1.exe" />
+    <None Include="bin\Debug\netcoreapp3.1\WebApplication1.pdb" />
+    <None Include="bin\Debug\netcoreapp3.1\WebApplication1.Views.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\WebApplication1.Views.pdb" />
+    <None Include="WebApplication1.sln" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="obj\" />
+  </ItemGroup>
 
 </Project>

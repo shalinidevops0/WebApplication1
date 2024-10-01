@@ -1,0 +1,32 @@
+name: Sync GitHub Commits to Azure DevOps Repository
+
+on:
+  push:
+    branches:
+      - main  # Adjust this to the branch you want to sync from
+
+jobs:
+  sync-to-azure:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the code from GitHub
+      uses: actions/checkout@v2
+
+    - name: Set up Git for pushing
+      run: |
+        git config --global user.email "github-actions@github.com"
+        git config --global user.name "GitHub Actions"
+
+    - name: Push changes to Azure DevOps repository
+      env:
+        AZURE_DEVOPS_TOKEN: ${{ secrets.AZURE_DEVOPS_TOKEN }}
+      run: |
+        # Add Azure DevOps as a remote repository
+        git remote add azure "${{ secrets.AZURE_DEVOPS_REPO_URL }}"
+
+        # Authenticate with Azure DevOps using the PAT token
+        git config --global http.https://dev.azure.com/.extraheader "AUTHORIZATION: Bearer $AZURE_DEVOPS_TOKEN"
+
+        # Push changes to Azure DevOps (e.g., main branch)
+        git push azure main
